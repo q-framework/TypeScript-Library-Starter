@@ -8,7 +8,10 @@
     "serve": "cross-env NODE_ENV=production node dist/index.js",
     "start": "cross-env NODE_ENV=development ts-node src/index.ts",
     "lint": "eslint src/**/*.ts test/**/*.ts",
-    "test": "rimraf coverage && jest --coverage"
+    "test": "rimraf coverage && jest --coverage",
+    "pack:development": "cross-env NODE_ENV=development rollup -c rollup.config.js",
+    "pack:production": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+    "pack": "rimraf dist && npm run pack:development && npm run pack:production"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,9 @@
     "jest": "^27.1.0",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
+    "rollup": "^2.56.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
