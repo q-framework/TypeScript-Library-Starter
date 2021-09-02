@@ -6,7 +6,7 @@ module.exports = {
     // browser: true,
     // node: true,
     // mocha: true,
-    // jest: true,
+    jest: true
     // jquery: true
   },
   globals: {
