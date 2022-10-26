@@ -1,0 +1,26 @@
+{
+  "name": "typescript-library-starter",
+  "version": "1.0.0",
+  "description": "typescript-library-starter",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development ts-node src/index.ts",
+    "build": "rimraf dist && cross-env NODE_ENV=production tsc",
+    "serve": "cross-env NODE_ENV=production node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
