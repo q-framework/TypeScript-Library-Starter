@@ -8,6 +8,7 @@
     "build": "rimraf dist && cross-env NODE_ENV=production tsc",
     "serve": "cross-env NODE_ENV=production node dist/index.js",
     "lint": "eslint \"**/*.{js,ts}\" --fix",
+    "format": "prettier -c -w \"**/*\" --ignore-path .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
@@ -20,6 +21,7 @@
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
     "eslint-config-alloy": "^5.1.2",
+    "prettier": "^3.0.3",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
